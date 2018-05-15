@@ -19,7 +19,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/css/**", "/js/**", "/fonts/**", "/index").permitAll()  // 虽都可以访问
+                .antMatchers("/css/**", "/index").permitAll()  // 虽都可以访问
                 .antMatchers("/user/**").hasRole("USER")   // 需要相应的角色才能访问
                 .antMatchers("/admin/**").hasRole("ADMIN")   // 需要相应的角色才能访问
                 .and()
