@@ -25,35 +25,45 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class MainController {
 
-	@RequestMapping("/")
-	public String root() {
-		return "redirect:/index";
-	}
+    @RequestMapping("/")
+    public String root() {
+        return "redirect:/index";
+    }
 
-	@RequestMapping("/index")
-	public String index() {
-		return "index";
-	}
+    @RequestMapping("/index")
+    public String index() {
+        return "index";
+    }
 
-	@RequestMapping("/user/index")
-	public String userIndex() {
-		return "user/index";
-	}
+    @RequestMapping("/user/index")
+    public String userIndex() {
+        return "user/index";
+    }
 
-	@RequestMapping("/admin/index")
-	public String adminIndex() {
-		return "admin/index";
-	}
+    @RequestMapping("/admin/index")
+    public String adminIndex() {
+        return "admin/index";
+    }
 
-	@RequestMapping("/login")
-	public String login() {
-		return "login";
-	}
+    @RequestMapping("/login")
+    public String login() {
+        return "login";
+    }
 
-	@RequestMapping("/login-error")
-	public String loginError(Model model) {
-		model.addAttribute("loginError", true);
-		return "login";
-	}
+    @RequestMapping("/login-error")
+    public String loginError(Model model) {
+        model.addAttribute("loginError", true);
+        return "login";
+    }
+
+    @RequestMapping("403")
+    public String page403() {
+        return "403";
+    }
+
+    @RequestMapping("404")
+    public String page404() {
+        return "404";
+    }
 
 }

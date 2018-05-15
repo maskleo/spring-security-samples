@@ -24,7 +24,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/admin/**").hasRole("ADMIN")   // 需要相应的角色才能访问
                 .and()
                 .formLogin()   //基于 Form 表单登录验证
-                .loginPage("/login").failureUrl("/login-error");  // 自定义登录界面
+                .loginPage("/login").failureUrl("/login-error")
+
+                .and()
+                .exceptionHandling()
+                .accessDeniedPage("/403");
     }
 
     @Override
