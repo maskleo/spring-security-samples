@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-security-samples.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-security-samples.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-security-samples-helloworld.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-security-samples-helloworld.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-security-samples-method-security.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-security-samples-method-security.iml" />
     </modules>
   </component>
 </project>

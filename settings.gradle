@@ -1,3 +1,4 @@
 rootProject.name = 'spring-security-samples'
 include 'spring-security-samples-helloworld'
+include 'spring-security-samples-method-security'
 

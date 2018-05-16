@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>User List</title>
+</head>
+<body>
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <td>ID</td>
+        <td>Age</td>
+        <td>Name</td>
+        <td sec:authorize="hasRole('ADMIN')">Operation</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:if="${userModel.userList.size()} eq 0">
+        <td colspan="3">没有用户信息！！</td>
+    </tr>
+    <tr th:each="user : ${userModel.userList}">
+        <td th:text="${user.id}">1</td>
+        <td th:text="${user.age}">11</td>
+        <td th:text="${user.name}">waylau</a></td>
+        <td sec:authorize="hasRole('ADMIN')">
+            <div >
+                <a th:href="@{'/users/delete/' + ${user.id}}">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </a>
+            </div>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

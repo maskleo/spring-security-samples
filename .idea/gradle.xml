@@ -10,6 +10,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/spring-security-samples-helloworld" />
+            <option value="$PROJECT_DIR$/spring-security-samples-method-security" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
